@@ -5,6 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../css/style.css" rel="stylesheet">
+    <?php
+        include '../../../database/database.php';
+        $cari = $_POST['cari'];
+        if($cari == null){
+            echo $cari;
+            $sql = "select * from data";
+        }else{
+            $sql = "select * from data where golongan_darah='$cari'";
+        }
+        $data = mysqli_query($conn,$sql);
+    ?>
 </head>
 
 <body>
@@ -96,11 +107,9 @@
                             Table Data
                         </h2>
                         <div class="text-end">
-                            <form
-                                class="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center">
-                                <div class=" relative ">
-                                    <input type="text" id="&quot;form-subscribe-Filter"
-                                        class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-transparent"
+                            <form action="index.php" method="POST" class="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center">
+                                <div class=" relative">
+                                    <input type="text" id="cari" name="cari" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-transparent"
                                         placeholder="Gol darah" />
                                 </div>
                                 <button
@@ -111,11 +120,6 @@
                             </form>
                         </div>
                     </div>
-                    <?php
-                        include '../../../database/database.php';
-                        $sql = "select * from data";
-                        $data = mysqli_query($conn,$sql);
-                    ?>
                     <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                         <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
                             <table class="min-w-full leading-normal">
@@ -179,7 +183,7 @@
                                         <td class="py-2 border-b">
                                             <?php echo $hasil[6] ?>
                                         </td>
-                                        
+
                                     </tr>
                                     <?php
 										$no++;
