@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,31 +20,41 @@
                             <div class="flex flex-col space-y-2 my-2">
                                 <h2 class="mx-4 space-x-2 font-mono font-bold">
                                     NIK :
-                                    <input type="text" class="border w-full mx-auto py-1 hover:bg-gray-200">
+                                    <input type="text" placeholder="Masukkan NIK" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
                                 </h2>
                                 <h2 class="mx-4 space-x-2 font-mono font-bold">
                                     Nama Lengkap
-                                    <input type="password" class="border w-full mx-auto py-1 hover:bg-gray-200">
+                                    <input type="text" placeholder="Masukkan Nama Lengkap" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
                                 </h2>
                                 <h2 class="mx-4 space-x-2 font-mono font-bold">
                                     Nomor Handphone
-                                    <input type="text" class="border w-full mx-auto py-1 hover:bg-gray-200">
+                                    <input type="text" placeholder="Masukkan Nomor Hp" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
                                 </h2>
                                 <h2 class="mx-4 space-x-2 font-mono font-bold">
                                     Alamat
-                                    <input type="password" class="border w-full mx-auto py-1 hover:bg-gray-200">
+                                    <input type="text" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
                                 </h2>
                                 <h2 class="mx-4 space-x-2 font-mono font-bold">
                                     Tanggal Lahir
-                                    <input type="text" class="border w-full mx-auto py-1 hover:bg-gray-200">
+                                    <input type="text" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
                                 </h2>
                                 <h2 class="mx-4 space-x-2 font-mono font-bold">
                                     Jenis kelamin
-                                    <input type="password" class="border w-full mx-auto py-1 hover:bg-gray-200">
+                                    <input type="text" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
                                 </h2>
                                 <h2 class="mx-4 space-x-2 font-mono font-bold">
                                     Golongan Darah
-                                    <input type="password" class="border w-full mx-auto py-1 hover:bg-gray-200">
+                                    <select class="form-select form-control w-full mx-auto py-1 px-2 border" name="jeniskelamin" id="text1">
+                                        <option selected>Pilih golongan darahmu</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
                                 </h2>
                             </div>
                         </div>
@@ -74,7 +84,7 @@
                                         placeholder="Gol darah" />
                                 </div>
                                 <button
-                                    class="flex-shrink-0 px-4 py-2 text-black font-semibold text-white bg-green-200 rounded-lg shadow-md hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-green-300"
+                                    class="flex-shrink-0 px-4 py-2 text-black font-semibold hover:text-white bg-green-200 rounded-lg shadow-md hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-green-300"
                                     type="submit">
                                     Filter
                                 </button>
@@ -118,7 +128,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        
+
                                     </tr>
                                 </tbody>
                             </table>
