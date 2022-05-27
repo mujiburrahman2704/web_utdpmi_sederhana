@@ -12,59 +12,79 @@
         <div class="lg:w-1/3 my-auto mx-2">
             <div class="container mx-auto">
                 <div class="mx-auto">
-                    <div class="border-2 rounded-lg">
-                        <div class="border p-2 bg-green-200 text-center">
-                            <p class="font-serif font-bold text-center">FORM REGISTRASI</p>
-                        </div>
-                        <div class="flex flex-wrap">
-                            <div class="flex flex-col space-y-2 my-2">
-                                <h2 class="mx-4 space-x-2 font-mono font-bold">
-                                    NIK :
-                                    <input type="text" placeholder="Masukkan NIK" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
-                                </h2>
-                                <h2 class="mx-4 space-x-2 font-mono font-bold">
-                                    Nama Lengkap
-                                    <input type="text" placeholder="Masukkan Nama Lengkap" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
-                                </h2>
-                                <h2 class="mx-4 space-x-2 font-mono font-bold">
-                                    Nomor Handphone
-                                    <input type="text" placeholder="Masukkan Nomor Hp" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
-                                </h2>
-                                <h2 class="mx-4 space-x-2 font-mono font-bold">
-                                    Alamat
-                                    <input type="text" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
-                                </h2>
-                                <h2 class="mx-4 space-x-2 font-mono font-bold">
-                                    Tanggal Lahir
-                                    <input type="text" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
-                                </h2>
-                                <h2 class="mx-4 space-x-2 font-mono font-bold">
-                                    Jenis kelamin
-                                    <input type="text" class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
-                                </h2>
-                                <h2 class="mx-4 space-x-2 font-mono font-bold">
-                                    Golongan Darah
-                                    <select class="form-select form-control w-full mx-auto py-1 px-2 border" name="jeniskelamin" id="text1">
-                                        <option selected>Pilih golongan darahmu</option>
-                                        <option value="A+">A+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="AB+">AB+</option>
-                                        <option value="AB-">AB-</option>
-                                        <option value="O+">O+</option>
-                                        <option value="O-">O-</option>
-                                    </select>
-                                </h2>
+
+                    <!-- registrasi start -->
+                    <form action="tambah/tambahdata.php" method="post">
+                        <div class="border-2 rounded-lg h-screen">
+                            <div class="border p-4 bg-green-200 text-center">
+                                <p class="font-serif font-bold text-center">FORM REGISTRASI</p>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <div class="flex flex-col space-y-2 my-2">
+                                    <h2 class="mx-4 space-x-2 font-mono font-bold">
+                                        NIK :
+                                        <input type="text" placeholder="Masukkan NIK" name="nik"
+                                            class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
+                                    </h2>
+                                    <h2 class="mx-4 space-x-2 font-mono font-bold">
+                                        Nama Lengkap
+                                        <input type="text" placeholder="Masukkan Nama Lengkap" name="namalengkap"
+                                            class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
+                                    </h2>
+                                    <h2 class="mx-4 space-x-2 font-mono font-bold">
+                                        Nomor Handphone
+                                        <input type="text" placeholder="Masukkan Nomor Hp" name="nomorhp"
+                                            class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
+                                    </h2>
+                                    <h2 class="mx-4 space-x-2 font-mono font-bold">
+                                        Alamat
+                                        <input type="text" placeholder="Masukkan Alamat" name="alamat"
+                                            class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
+                                    </h2>
+                                    <h2 class="mx-4 space-x-2 font-mono font-bold">
+                                        Tanggal Lahir
+                                        <input type="date" placeholder="Masukkan tanggal lahir" name="tanggallahir"
+                                            class="border w-full mx-auto py-1 px-2 hover:bg-gray-200">
+                                    </h2>
+                                    <h2 class="mx-4 space-x-2 font-mono font-bold">
+                                        Jenis kelamin
+                                        <select name="jeniskelamin" id="jeniskelamin"
+                                            class="w-full mx-auto py-1 px-2 border hover:bg-gray-200">
+                                            <option value="" selected>Pilih jenis kelamin</option>
+                                            <option value="laki-laki">Laki-Laki</option>
+                                            <option value="perempuan">Perempuan</option>
+                                        </select>
+                                    </h2>
+                                    <h2 class="mx-4 space-x-2 font-mono font-bold">
+                                        Golongan Darah
+                                        <select
+                                            class="form-select form-control w-full mx-auto py-1 px-2 border hover:bg-gray-200"
+                                            name="golongandarah" id="text1">
+                                            <option value="" selected>Pilih golongan darahmu</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                        </select>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="flex justify-end mx-2 my-2">
+                                <button
+                                    class="bg-green-200 hover:bg-green-300 hover:text-white text-black font-semibold py-2 px-4 border rounded-lg"
+                                    type="submit">
+                                    Tambah
+                                </button>
                             </div>
                         </div>
-                        <div class="flex justify-end mx-2 my-2">
-                            <button
-                                class="bg-green-200 hover:bg-green-300 text-black font-semibold py-2 px-4 border rounded-lg">
-                                Tambah
-                            </button>
-                        </div>
-                    </div>
+                    </form>
+                    <!-- End Registrasi -->
+
+
                 </div>
             </div>
         </div>
@@ -91,6 +111,11 @@
                             </form>
                         </div>
                     </div>
+                    <?php
+                        include '../../../database/database.php';
+                        $sql = "select * from data";
+                        $data = mysqli_query($conn,$sql);
+                    ?>
                     <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                         <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
                             <table class="min-w-full leading-normal">
@@ -126,50 +151,42 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-
+                                <tbody class="text-center">
+                                    <?php
+									$no = 1;
+									while ($hasil = mysqli_fetch_array($data)) 
+				    				{
+								?>
+                                    <tr class="">
+                                        <td class="py-2 border-b">
+                                            <?php echo $hasil[0] ?>
+                                        </td>
+                                        <td class="py-2 border-b">
+                                            <?php echo $hasil[1] ?>
+                                        </td>
+                                        <td class="py-2 border-b">
+                                            <?php echo $hasil[2] ?>
+                                        </td>
+                                        <td class="py-2 border-b">
+                                            <?php echo $hasil[3] ?>
+                                        </td>
+                                        <td class="py-2 border-b">
+                                            <?php echo $hasil[4] ?>
+                                        </td>
+                                        <td class="py-2 border-b">
+                                            <?php echo $hasil[5] ?>
+                                        </td>
+                                        <td class="py-2 border-b">
+                                            <?php echo $hasil[6] ?>
+                                        </td>
+                                        
                                     </tr>
+                                    <?php
+										$no++;
+									}
+									?>
                                 </tbody>
                             </table>
-                            <div class="px-5 bg-white py-5 flex flex-col xs:flex-row items-center xs:justify-between">
-                                <div class="flex items-center">
-                                    <button type="button"
-                                        class="w-full p-4 border text-base rounded-l-xl text-gray-600 bg-white hover:bg-gray-100">
-                                        <svg width="9" fill="currentColor" height="8" class="" viewBox="0 0 1792 1792"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z">
-                                            </path>
-                                        </svg>
-                                    </button>
-                                    <button type="button"
-                                        class="w-full px-4 py-2 border-t border-b text-base text-indigo-500 bg-white hover:bg-gray-100 ">
-                                        1
-                                    </button>
-                                    <button type="button"
-                                        class="w-full px-4 py-2 border text-base text-gray-600 bg-white hover:bg-gray-100">
-                                        2
-                                    </button>
-                                    <button type="button"
-                                        class="w-full px-4 py-2 border-t border-b text-base text-gray-600 bg-white hover:bg-gray-100">
-                                        3
-                                    </button>
-                                    <button type="button"
-                                        class="w-full px-4 py-2 border text-base text-gray-600 bg-white hover:bg-gray-100">
-                                        4
-                                    </button>
-                                    <button type="button"
-                                        class="w-full p-4 border-t border-b border-r text-base  rounded-r-xl text-gray-600 bg-white hover:bg-gray-100">
-                                        <svg width="9" fill="currentColor" height="8" class="" viewBox="0 0 1792 1792"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
-                                            </path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
