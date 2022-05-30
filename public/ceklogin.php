@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include '../database/database.php';
+	include 'database/database.php';
 	$user = $_POST['username'];
 	$pass = md5($_POST['password']);
 	if(empty($user) || empty($pass)){
