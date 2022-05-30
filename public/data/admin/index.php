@@ -71,7 +71,7 @@ include '../../../database/database.php';
                                 </span>
                             </a>
                             <a class="w-full font-thin uppercase text-black flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:bg-gradient-to-r from-white to-red-100 hover:border-r-4 border-red-500"
-                                href="#">
+                                href="../../logout.php">
                                 <span class="text-left">
                                     <svg width="20" fill="currentColor" height="20" class="h-5 w-5"
                                         viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -104,15 +104,6 @@ include '../../../database/database.php';
                                             </path>
                                         </svg>
                                     </div>
-                                    <svg class="absolute left-0 z-20 hidden w-4 h-4 ml-4 text-gray-500 pointer-events-none fill-current group-hover:text-gray-400 sm:block"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path
-                                            d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z">
-                                        </path>
-                                    </svg>
-                                    <input type="text"
-                                        class="block w-full py-1.5 pl-10 pr-4 leading-normal rounded-2xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-red-500 ring-opacity-90 bg-gray-200 text-gray-400 aa-input"
-                                        placeholder="Search" />
                                 </div>
                             </div>
                             <div
