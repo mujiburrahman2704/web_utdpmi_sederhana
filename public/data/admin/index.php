@@ -12,8 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <title>UTD PMI</title>
     <?php
-session_start();
 include '../../../database/database.php';
+session_start();
+if(isset($_SESSION['level']) != "admin" ){
+    echo "<script language ='javascript'>
+        alert('bapakkau');	
+        location.href='../../index.php?login=berhasil';
+    </script>";
+}
+if(isset($_GET['cari'])){
+	$cari = $_GET['cari'];
+	echo "<b>Hasil pencarian : ".$cari."</b>";
+}
 ?>
 </head>
 
@@ -160,7 +170,7 @@ include '../../../database/database.php';
                                                     Table Data
                                                 </h2>
                                                 <div class="text-end">
-                                                    <form action="tambah/cari.php" method="POST"
+                                                    <form action="index.php" method="POST"
                                                         class="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center">
                                                         <div class=" relative">
                                                             <input type="text" id="cari" name="cari"

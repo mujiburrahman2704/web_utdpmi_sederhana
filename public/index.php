@@ -24,13 +24,13 @@ session_start();
                             <h2 class="mx-4 space-x-2 font-mono font-bold">
                                 Username :
                                 <div class="mx-4">
-                                    <input type="text" name="username" class="border rounded-lg w-full py-1 hover:bg-gray-200">
+                                    <input type="text" name="username" class="border rounded-lg w-full py-1 px-2 hover:bg-gray-200">
                                 </div>
                             </h2>
                             <h2 class="mx-4 space-x-2 font-mono font-bold">
                                 Password :
                                 <div class="mx-4">
-                                    <input type="text" name="password" class="border rounded-lg w-full py-1 hover:bg-gray-200">
+                                    <input type="password" name="password" class="border rounded-lg w-full py-1 px-2 hover:bg-gray-200">
                                 </div>
                             </h2>
                         </div>

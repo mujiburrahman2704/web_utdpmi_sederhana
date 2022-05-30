@@ -7,15 +7,16 @@
 		echo "hey Anda Gagal Login!!";
         header("location:../public?pesan=Gagal Login");
 	}else{
-		$sql = mysqli_query($conn,"SELECT * FROM user where username='$user'");
+		$sql = mysqli_query($conn,"SELECT * FROM user where username='$user' AND password='$pass'");
 		$cek = mysqli_num_rows($sql);
 		if($cek > 0){
 			$data = mysqli_fetch_assoc($sql);
 			if($data['level']=="admin"){
 				$_SESSION['username'] = $user;
 				$_SESSION['level'] = "admin"; //isi session
-				echo "<script language ='javascript'>	
-				location.href='data/admin?pesan=Login';//
+				echo "<script language ='javascript'>
+				alert('bapakkau');	
+				location.href='data/admin?pesan=Login';
 				</script>";
 			}else if($data['level']=="user"){
 				$_SESSION['username'] = $user;
