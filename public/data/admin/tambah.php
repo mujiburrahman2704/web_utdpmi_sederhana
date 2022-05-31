@@ -70,27 +70,30 @@ if(isset($_GET['cari'])){
                                 <form action="tambah/tambahdata.php" method="post" class="space-y-8">
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">NIK</h2>
-                                        <input type="text" placeholder="Masukkan NIk" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="text" placeholder="Masukkan NIk" name="nik" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Nomor Hp</h2>
-                                        <input type="text" placeholder="Masukkan NIk" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="text" placeholder="Masukkan Nama Lengkap" name="namalengkap" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Alamat</h2>
-                                        <input type="text" placeholder="Masukkan NIk" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="text" placeholder="Masukkan Alamat" name="alamat" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Tanggal Lahir</h2>
-                                        <input type="text" placeholder="Masukkan NIk" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="date" placeholder="Masukkan Tanggal Lahir" name="tanggallahir" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Jenis Kelamin</h2>
-                                        <input type="text" placeholder="Masukkan NIk" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="text" placeholder="Masukkan Jenis Kelamin" name="jeniskelamin" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Golongan Darah</h2>
-                                        <input type="text" placeholder="Masukkan NIk" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="text" placeholder="Masukkan Golongan Darah" name="golongadarah" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <button type="submit" class="border rounded-lg bg-green-500 py-2 px-2 text-white" name="tambah">Tambah</button>
                                     </div>
                                 </form>
                             </div>

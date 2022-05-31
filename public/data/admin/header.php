@@ -31,7 +31,7 @@
                                     </svg>
                                 </span>
                                 <span class="mx-4 text-sm font-normal">
-                                    Projects
+                                    Tambah Data
                                 </span>
                             </a>
                             <a class="w-full font-thin uppercase text-black flex items-center p-4 my-2 transition-colors duration-200 justify-start hover:bg-gradient-to-r from-white to-red-100 hover:border-r-4 border-red-500"
