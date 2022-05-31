@@ -1,6 +1,6 @@
 <body>
 <?php
-include '../../../../database/database.php';
+include '../../../database/database.php';
 if(isset($_POST['tambah'])){
     $nik=$_POST['nik'];
     $nama=$_POST['namalengkap'];
