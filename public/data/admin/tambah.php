@@ -16,7 +16,6 @@ include '../../database/database.php';
 session_start();
 if(isset($_SESSION['level']) != "admin" ){
     echo "<script language ='javascript'>
-        alert('bapakkau');	
         location.href='../../index.php?login=berhasil';
     </script>";
 }
@@ -98,7 +97,7 @@ if(isset($_GET['cari'])){
                                     </div>
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Golongan Darah</h2>
-                                        <select name="golongandarah" id="golongandarahcle" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <select name="golongandarah" id="golongandarah" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                             <option disabled selected>Pilih Golongan darah</option>
                                             <option value="O-">O-</option>
                                             <option value="O+">O+</option>

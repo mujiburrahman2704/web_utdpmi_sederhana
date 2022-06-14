@@ -16,13 +16,12 @@ include '../../database/database.php';
 session_start();
 if(isset($_SESSION['level']) != "admin" ){
     echo "<script language ='javascript'>
-        alert('bapakkau');	
         location.href='../../index.php?login=berhasil';
     </script>";
 }
 if(isset($_GET['cari'])){
     $cari = $_GET['cari'];
-		$sql = 'SELECT * FROM data where golongan_darah like "%'.$cari.'%"';				
+		$sql = 'SELECT * FROM data where golongandarah like "%'.$cari.'%"';				
 	}else{
 		$sql = 'select * from data'; 
 }
@@ -64,9 +63,8 @@ if(isset($_GET['cari'])){
                     </div>
                 </header>
                 <?php
-                $sql1 = mysqli_query($conn,'SELECT COUNT(nik) FROM data');
-                $jumlah = mysqli_num_rows($sql1);
-
+                $sql1 = mysqli_query($conn,'SELECT * FROM data');
+                $count    =mysqli_num_rows($sql1);
                 ?>
                 <div class="overflow-auto h-screen pb-24 pt-2 pr-2 pl-2 md:pt-0 md:pr-0 md:pl-0">
                     <div class="flex flex-wrap sm:flex-row" style="height: 99%;">
@@ -77,7 +75,7 @@ if(isset($_GET['cari'])){
                                         <h2 class="py-2 text-xl font-serif">Jumlah Data</h2>
                                     </div>
                                     <h2 class="py-6 text-3xl">
-                                        <?php echo $jumlah ?>
+                                        <?php echo $count ?>
                                     </h2>
                                 </div>
                                 <div class="my-4 border bg-white rounded-lg">
@@ -85,7 +83,7 @@ if(isset($_GET['cari'])){
                                         <h2 class="py-2 text-xl font-serif">Gol Darah</h2>
                                     </div>
                                     <h2 class="py-6 text-3xl">
-                                        <?php echo $jumlah ?>
+                                        <?php echo $count ?>
                                     </h2>
                                 </div>
                                 <div class="my-4 border bg-white rounded-lg">
@@ -93,7 +91,7 @@ if(isset($_GET['cari'])){
                                         <h2 class="py-2 text-xl font-serif">Jumlah Data</h2>
                                     </div>
                                     <h2 class="py-6 text-3xl">
-                                        <?php echo $jumlah ?>
+                                        <?php echo $count ?>
                                     </h2>
                                 </div>
 
@@ -195,6 +193,9 @@ if(isset($_GET['cari'])){
                                                         </tbody>
                                                     </table>
                                                 </div>
+                                            </div>
+                                            <div class="flex justify-end">
+                                                <a href="tambah/table.php" class="py-2 rounded-lg px-4 bg-green-500 text-white" target="_BLANK">Print</a>
                                             </div>
                                         </div>
                                     </div>

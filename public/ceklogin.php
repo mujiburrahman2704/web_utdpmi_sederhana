@@ -19,7 +19,7 @@
 				</script>";
 			}else if($data['level']=="user"){
 				$_SESSION['username'] = $user;
-				$_SESSION['level'] = "user"; //isi session
+				$_SESSION['level'] = "dokter"; //isi session
 				echo "<script language ='javascript'>
 				alert('Username dan Password yang anda masukkan SALAH!!');
 					location.href='data/user';//

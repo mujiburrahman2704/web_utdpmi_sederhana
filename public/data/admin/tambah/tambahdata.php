@@ -1,4 +1,3 @@
-<body>
 <?php
 include '../../../database/database.php';
 if(isset($_POST['tambah'])){
@@ -21,16 +20,16 @@ if(isset($_POST['tambah'])){
         }else{
             $sql="insert into data values('$nik','$nama','$nohp','$alamat','$tanggallahir','$jeniskelamin','$golongandarah')";
             mysqli_query($conn,$sql);
+            ?>
+            <script language="javascript">
+                alert("Berhasil Disimpan !");
+                location.href="../";
+            </script>
+            <?php
         }
         
     }
 }
-    
-
 ?>
-<script language="javascript">
-alert("Berhasil Disimpan !");
-location.href="../";
-</script>
 
-</body>
+
