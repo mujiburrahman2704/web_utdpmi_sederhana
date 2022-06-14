@@ -37,34 +37,20 @@ if(isset($_GET['cari'])){
             <div class="flex flex-col w-full pl-0 md:p-4 md:space-y-4">
                 <header class="w-full shadow-lg bg-white items-center h-16 rounded-2xl z-40">
                     <div class="relative z-20 flex flex-col justify-center h-full px-3 mx-auto flex-center">
-                        <div class="relative items-center pl-1 flex w-full lg:max-w-68 sm:pr-2 sm:ml-0">
+                        <div class="relative items-center flex w-full lg:max-w-68">
                             <div class="container relative left-0 z-50 flex w-3/4 h-full">
-                                <div class="relative flex items-center w-full lg:w-64 h-full group">
-                                    <div
-                                        class="absolute z-50 flex items-center justify-center w-auto h-10 p-3 pr-2 text-sm text-black uppercase cursor-pointer sm:hidden">
-                                        <svg fill="none" class="relative w-5 h-5" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
+                                <div class="relative flex items-center w-full h-full group">
+                                    <marquee direction="left" loop="infinite" scrollamount="4" align="center">
+                                        
+                                    </marquee>
                                 </div>
-                            </div>
-                            <div
-                                class="relative p-1 flex items-center justify-end w-1/4 ml-5 mr-4 sm:mr-0 sm:right-auto">
-                                <a href="#" class="block relative">
-                                    <img alt="profil" src="../../img/M_Nasir.png"
-                                        class="mx-auto object-cover rounded-full h-10 w-10 " />
-                                </a>
                             </div>
                         </div>
                     </div>
                 </header>
                 <?php
                 $sql1 = mysqli_query($conn,'SELECT * FROM data');
-                $count    =mysqli_num_rows($sql1);
+                $count = mysqli_num_rows($sql1);
                 ?>
                 <div class="overflow-auto h-screen pb-24 pt-2 pr-2 pl-2 md:pt-0 md:pr-0 md:pl-0">
                     <div class="flex flex-wrap sm:flex-row" style="height: 99%;">
@@ -195,7 +181,9 @@ if(isset($_GET['cari'])){
                                                 </div>
                                             </div>
                                             <div class="flex justify-end">
-                                                <a href="tambah/table.php" class="py-2 rounded-lg px-4 bg-green-500 text-white" target="_BLANK">Print</a>
+                                                <a href="tambah/table.php"
+                                                    class="py-2 rounded-lg px-4 bg-green-500 text-white"
+                                                    target="_BLANK">Print</a>
                                             </div>
                                         </div>
                                     </div>

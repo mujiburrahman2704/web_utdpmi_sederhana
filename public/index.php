@@ -33,6 +33,9 @@ session_start();
                                     <input type="password" name="password" class="border rounded-lg w-full py-1 px-2 hover:bg-gray-200">
                                 </div>
                             </h2>
+                            <h2 class="mx-4 space-x-2 font-mono">
+                                Belum memiliki akun ? daftar <a href="register.php" class="hover:text-green-300">disini</a>
+                            </h2>
                         </div>
                     </div>
                     <div class="flex justify-end mx-2 my-2">
