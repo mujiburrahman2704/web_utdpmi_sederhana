@@ -18,14 +18,6 @@ if(isset($_SESSION['level']) != "admin" ){
     echo "<script language ='javascript'>
         location.href='../../index.php?login=berhasil';
     </script>";
-    
-
-}
-if(isset($_GET['cari'])){
-    $cari = $_GET['cari'];
-		$sql = 'SELECT * FROM data WHERE golongan_darah LIKE "%'.$cari.'%" OR nik like "%'.$cari.'%"';				
-	}else{
-		$sql = 'select * from data'; 
 }
 ?>
     <script src="https://kit.fontawesome.com/fb244dd16a.js" crossorigin="anonymous"></script>
@@ -86,78 +78,35 @@ if(isset($_GET['cari'])){
                                             </div>
                                             <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                                                 <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
-                                                    <table class="min-w-full leading-normal text-sm">
+                                                    <table class="min-w-full leading-normal">
                                                         <thead>
                                                             <tr>
                                                                 <th scope="col"
                                                                     class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                                                    NIK
+                                                                    Golongan Darah
                                                                 </th>
                                                                 <th scope="col"
                                                                     class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                                                    Nama
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                                                    Nomor Hp
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                                                    Alamat
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                                                    Tanggal lahir
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                                                    Jenis Kelamin
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                                                    Gol Darah
-                                                                </th>
-                                                                <th scope="col"
-                                                                    class="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal">
-                                                                    Input Darah
+                                                                    Jumlah Pasokan
                                                                 </th>
                                                             </tr>
                                                         </thead>
                                                         <tbody class="text-left">
                                                             <?php
-                                                            $data = mysqli_query($conn,$sql);
-									$no = 1;
-									while ($hasil = mysqli_fetch_array($data)) 
-				    				{
-								?>
-                                                            <tr class="">
+                                                                $sql = 'SELECT * FROM darah';
+                                                                $data = mysqli_query($conn,$sql);
+                                                                $no = 1;
+                                                                while ($hasil = mysqli_fetch_array($data)) 
+                                                                {
+                                                            ?>
+                                                            <tr>
                                                                 <td class="py-3 px-5 border-b">
                                                                     <?php echo $hasil[0] ?>
                                                                 </td>
                                                                 <td class="py-3 px-5 border-b">
                                                                     <?php echo $hasil[1] ?>
                                                                 </td>
-                                                                <td class="py-3 px-5 border-b">
-                                                                    <?php echo $hasil[2] ?>
-                                                                </td>
-                                                                <td class="py-3 px-5 border-b">
-                                                                    <?php echo $hasil[3] ?>
-                                                                </td>
-                                                                <td class="py-3 px-5 border-b">
-                                                                    <?php echo $hasil[4] ?>
-                                                                </td>
-                                                                <td class="py-3 px-5 border-b">
-                                                                    <?php echo $hasil[5] ?>
-                                                                </td>
-                                                                <td class="py-3 px-5 border-b">
-                                                                    <?php echo date("d-m-Y h:i"); ?>
-                                                                </td>
-                                                                <td class="py-3 px-5 border-b">
-                                                                    <a class="flex-shrink-0 px-4 py-2 text-black font-semibold hover:text-white bg-green-200 rounded-lg shadow-md hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-green-300"
-                                                                        href="inputdarah.php?nik=<?php echo $hasil['nik'] ?>">
-                                                                        +
-                                                                    </a>
-                                                                </td>
+
                                                             </tr>
                                                             <?php
 										$no++;
@@ -166,7 +115,6 @@ if(isset($_GET['cari'])){
                                                         </tbody>
                                                     </table>
                                                 </div>
-                                                <br><br><br><br><br>
                                             </div>
                                         </div>
                                     </div>

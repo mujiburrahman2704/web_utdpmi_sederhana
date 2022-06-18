@@ -26,6 +26,7 @@ if(isset($_GET['cari'])){
 		$sql = 'select * from data'; 
 }
 ?>
+    <script src="https://kit.fontawesome.com/fb244dd16a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -39,25 +40,13 @@ if(isset($_GET['cari'])){
                     <div class="relative z-20 flex flex-col justify-center h-full px-3 mx-auto flex-center">
                         <div class="relative items-center pl-1 flex w-full lg:max-w-68 sm:pr-2 sm:ml-0">
                             <div class="container relative left-0 z-50 flex w-3/4 h-full">
-                                <div class="relative flex items-center w-full lg:w-64 h-full group">
-                                    <div
-                                        class="absolute z-50 flex items-center justify-center w-auto h-10 p-3 pr-2 text-sm text-black uppercase cursor-pointer sm:hidden">
-                                        <svg fill="none" class="relative w-5 h-5" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
+                                <div class="relative flex items-center w-full h-full group">
+                                    <marquee direction="left" loop="infinite" scrollamount="10" align="center">
+                                        <h2 class="text-2xl font-serif text-red-500 text-center">Setetes Darah Kita
+                                            Nyawa Bagi Sesama,<p style="word-spacing: 10rem;"></p>Terima Kasih atas
+                                            Sumbangan Darah Anda Bagi Sesama</h2>
+                                    </marquee>
                                 </div>
-                            </div>
-                            <div
-                                class="relative p-1 flex items-center justify-end w-1/4 ml-5 mr-4 sm:mr-0 sm:right-auto">
-                                <a href="#" class="block relative">
-                                    <img alt="profil" src="../../img/M_Nasir.png"
-                                        class="mx-auto object-cover rounded-full h-10 w-10 " />
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -69,35 +58,43 @@ if(isset($_GET['cari'])){
                                 <form action="tambah/tambahdata.php" method="post" class="space-y-8">
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">NIK</h2>
-                                        <input type="text" placeholder="Masukkan NIk" name="nik" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="text" placeholder="Masukkan NIk" name="nik"
+                                            class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Nama Lengkap</h2>
-                                        <input type="text" placeholder="Masukkan Nama Lengkap" name="namalengkap" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="text" placeholder="Masukkan Nama Lengkap" name="namalengkap"
+                                            class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Nomor Hp</h2>
-                                        <input type="text" placeholder="Masukkan Nomor Hp" name="nomorhp" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="text" placeholder="Masukkan Nomor Hp" name="nomorhp"
+                                            class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Alamat</h2>
-                                        <input type="text" placeholder="Masukkan Alamat" name="alamat" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="text" placeholder="Masukkan Alamat" name="alamat"
+                                            class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Tanggal Lahir</h2>
-                                        <input type="date" placeholder="Masukkan Tanggal Lahir" name="tanggallahir" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <input type="date" placeholder="Masukkan Tanggal Lahir" name="tanggallahir"
+                                            class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                     </div>
                                     <div class="grid grid-cols-4 ">
                                         <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Jenis Kelamin</h2>
-                                        <select name="jeniskelamin" id="jeniskelamin" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <select name="jeniskelamin" id="jeniskelamin"
+                                            class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                             <option disabled selected>Pilih jenis Kelamin</option>
                                             <option value="laki-laki">Laki-Laki</option>
                                             <option value="perempuan">Perempuan</option>
                                         </select>
                                     </div>
                                     <div class="grid grid-cols-4 ">
-                                        <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Golongan Darah</h2>
-                                        <select name="golongandarah" id="golongandarah" class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
+                                        <h2 class="col-start-1 col-end-2 self-center text-right mx-2">Golongan Darah
+                                        </h2>
+                                        <select name="golongandarah" id="golongandarah"
+                                            class=" border rounded-lg col-start-2 col-end-5 col-span-2 py-2">
                                             <option disabled selected>Pilih Golongan darah</option>
                                             <option value="O-">O-</option>
                                             <option value="O+">O+</option>
@@ -110,7 +107,9 @@ if(isset($_GET['cari'])){
                                         </select>
                                     </div>
                                     <div class="flex justify-end">
-                                        <button type="submit" class="border rounded-lg bg-green-500 py-2 px-2 text-white" name="tambah">Tambah</button>
+                                        <button type="submit"
+                                            class="border rounded-lg bg-green-500 py-2 px-2 text-white"
+                                            name="tambah">Tambah</button>
                                     </div>
                                 </form>
                             </div>
