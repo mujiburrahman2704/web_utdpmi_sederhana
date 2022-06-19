@@ -12,9 +12,10 @@ if(isset($_POST['tambah'])){
         $sql1 = mysqli_query($conn,"SELECT * FROM data WHERE nik='$nik'");
         $cek = mysqli_num_rows($sql1);
         $data = mysqli_fetch_array($sql1);
+        $nama = $data['nama_lengkap'];
         $gol = $data['golongan_darah'];
         if($cek > 0){
-            mysqli_query($conn,"insert into report values('$nik','$date','$jumlah')");
+            mysqli_query($conn,"insert into report values('$nik','$nama','$gol','$date','$jumlah')");
             mysqli_query($conn,"UPDATE darah set jumlah = jumlah+'$jumlah' WHERE gol_darah='$gol'");
             ?>
             <script language="javascript">

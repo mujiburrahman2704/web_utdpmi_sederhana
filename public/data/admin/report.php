@@ -21,9 +21,9 @@ if(isset($_SESSION['level']) != "admin" ){
 }
 if(isset($_GET['cari'])){
     $cari = $_GET['cari'];
-		$sql = 'SELECT * FROM report join data on data.nik = report.nik WHERE golongan_darah LIKE "%'.$cari.'%" OR nik like "%'.$cari.'%"';				
+		$sql = 'SELECT * FROM report  WHERE golongan_darah LIKE "%'.$cari.'%" OR nik like "%'.$cari.'%"';				
 	}else{
-		$sql = 'SELECT * FROM report join data on data.nik = report.nik'; 
+		$sql = 'SELECT * FROM report'; 
 }
 ?>
     <script src="https://kit.fontawesome.com/fb244dd16a.js" crossorigin="anonymous"></script>
